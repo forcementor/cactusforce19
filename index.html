@@ -15,7 +15,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css" id="theme">
+		<link rel="stylesheet" href="css/theme/night.css" id="theme">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -42,10 +42,9 @@
 			<div class="slides">
 
 				<section>
-						<h4>Embracing </br>Service Oriented Patterns</br> in Apex</h4>
+						<h2>Embracing </br>Service Oriented Patterns</br> in Apex</h2>
 						<h8>(or how to avoid <i>Mondo</i> mania)</h8>
 				</section>
-
 
 				<section data-transition="slide">
 						<h4>Don Robins</h4>
@@ -58,76 +57,124 @@
 						<h8>Books, Posts, Articles</h8><br/>
 				</section>
 
-				<section data-transition="slide">
-						<h4>What's my goal?</h4>
+				<section data-transition="slide-in fade-out">
+					<h3>What's my goal?</h3>
 				</section>
 
-				<section data-transition="slide">
-						<h4>To open your eyes!</h4>
-						<img src="img/clockwork_orange.gif" class="stretch"/>	
+				<section data-background-image="img/clockwork_orange.gif" data-transition="fade-in fade-out">
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					
+					<h3>To open your eyes</h3>
+					<div style="font-size: 15px;"><i>"A Clockwork Orange" &#9400; 1971 - courtesy of Warner Bros.</i></div>
 				</section>
 
-
-
-
-
-				<section data-transition="slide">
-						<h4>What's NOT my goal?</h4>
+				<section data-transition="fade-in fade-out">
+					<h4>...and to expose and encourage you to explore:</h3>
+					<h8 class="fragment">Adopting software development patterns</h8><br/>
+					<h8 class="fragment">by layering your codebase</h8><br/>
+					<h8 class="fragment">and decoupling complexity in your org</h8><br/>										
 				</section>
 
-				<section data-transition="slide">
-						<h4>To open your eyes!</h4>
+				<section data-transition="slide-in fade-out">
+					<h3>What's NOT my goal?</h3>
 				</section>
 
+				<section data-background-image="img/clockwork_orange.gif" data-transition="fade-in fade-out">
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					<br/>
+					
+					<h3>To brainwash you</h3>
+					<div style="font-size: 15px;"><i>"A Clockwork Orange" &#9400; 1971 - courtesy of Warner Bros.</i></div>
+				</section>
 
+				<section data-transition="fade-in fade-out">
+					<h4>...and to convince you to:</h3>
+					<h8 class="fragment">Migrate to a complex architectural framework</h8><br/>
+					<h8 class="fragment">requiring you to refactor your entire codebase</h8><br/>
+					<h8 class="fragment">and maxing out the Apex code limit in your org</h8><br/>										
+				</section>
 
+				<section data-transition="slide-in fade-out">
+					<h3>Let's identify the problem...</h3>
+				</section>
 
-				<section data-transition="slide">
-						<img src="img/Mongo.jpg" />	
-						<p class="fragment fade-in">
-							<i>MONGO</i>
-						</p>	
+				<section data-transition="slide-in fade-out">
+					<img src="img/Mongo.jpg" />	
+					<p class="fragment fade-in">
+						<i>MONGO</i>
+					</p>	
 				</section>
 	
-				<section data-transition="slide">
+				<section data-transition="fade-in slide-out">
 					<img src="img/blazing_saddles_movie_poster_big.jpg" />	
-					<div><i>(1984 - courtesy of Warner Bros.)</i></div>
+					<div style="font-size: 12px;"><i>Courtesy of Warner Bros.</i></div>
 				</section>
 	
+				<!-- 
 				<section data-transition="slide">
 						<img src="img/mongopawn1.gif" />	
 						<div><i>"Mongo only pawn in game of life..."</i></div>
 				</section>
+				-->
 	
 				<section data-transition="slide">
 					<img src="img/mongopiano.gif" />	
-					<div>hu-MONGO-us</div>
+					<p class="fragment fade-in">
+						hu-MONGO-us
+					</p>
 				</section>
 	
-				<section data-transition="slide">
+				<section data-transition="slide-in fade-out">
+					<h4>Mongo ~ Mondo</h4>
+				</section>
+
+				<section data-transition="fade-in fade-out">
 						<img src="img/Definition_of_Mondo.jpg" />	
 				</section>
 	
-				<section data-transition="slide">
 
-					<section data-background-video="media/SocClipSilent.mp4" 
-							 data-background-video-loop data-background-size="cover">
-						<div>
-							<img data-src="img/SocTitle.jpg" style="opacity: 0.75" height="50%" width="50%">
-						</div>
-					</section>
-
-					<section data-background-iframe="img/ApexSocChannel.jpg" 
-							 data-background-interactive 
-							 class="stretch" >
-					</section>
-
-					<section data-background-iframe="https://trailhead.salesforce.com/content/learn/modules/apex_patterns_sl?trail_id=force_com_dev_advanced" 
-							 data-background-interactive >
-							 <p>test</p>
-					</section>
-
+				<section data-transition="slide-in fade-out">
+					<h4>Mondo-mania is the preponderance of oodles and oodles of code in any one programmatic construct.</h4>
 				</section>
+
+				<section data-transition="fade-in fade-out">
+					<h4>In Salesforce mondo-mania is found in:</h3>
+					<h8 class="fragment fade-in ">Apex Triggers</h8><br/>
+					<h8 class="fragment fade-in ">Apex Classes</h8><br/>
+					<h8 class="fragment fade-in ">Apex Class Methods</h8><br/>
+					<h8 class="fragment fade-in-then-semi-out">Visualforce Pages</h8><br/>															
+				</section>
+
+				<section data-transition="slide-in fade-out">
+					<h3>Let's look at an example...</h3>
+				</section>
+
+				<section data-background-iframe="media/MondoSample.class" 
+						data-background-interactive >
+			   </section>
+
+
+
+
 
 
 				<section>
@@ -161,6 +208,24 @@
 
 
 
+				<section data-transition="slide">
+					The train goes on …
+				</section>
+				<section data-transition="slide">
+					and on …
+				</section>
+				<section data-transition="slide-in fade-out">
+					and stops.
+				</section>
+				<section data-transition="fade-in slide-out">
+					(Passengers entering and leaving)
+				</section>
+				<section data-transition="slide">
+					And it starts again.
+				</section>
+
+
+
 				<section>
 						<h2>Fantastic Ordered List</h2>
 						<ol>
@@ -181,6 +246,48 @@
 		
 				</section>
 	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+				<!-- Supplemental -->	
+
+				<section data-transition="slide">
+
+					<section data-background-video="media/SocClipSilent.mp4" 
+							 data-background-video-loop data-background-size="cover">
+						<div>
+							<img data-src="img/SocTitle.jpg" style="opacity: 0.75" height="50%" width="50%">
+						</div>
+					</section>
+
+					<section data-background-iframe="img/ApexSocChannel.jpg" 
+							 data-background-interactive 
+							 class="stretch" >
+					</section>
+
+					<section data-background-iframe="https://trailhead.salesforce.com/content/learn/modules/apex_patterns_sl?trail_id=force_com_dev_advanced" 
+							 data-background-interactive >
+							 <p>test</p>
+					</section>
+
+				</section>
+
+
+				
 
 
 
@@ -545,7 +652,7 @@ Reveal.addEventListener( 'customevent', function() {
 				progress: true,
 				history: true,
 				center: true,
-				slideNumber: true,
+				slideNumber: 'c/t',
 				autoPlayMedia: true,
 
 				transition: 'slide', // none/fade/slide/convex/concave/zoom
