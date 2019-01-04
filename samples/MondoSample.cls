@@ -1,22 +1,8 @@
-/*
-###########################################################################
-# File..................: <<Calculate PFYRR>>
-# Version...............: <<15.0>>
-# Created by............: <<Astadia - Becky Bastien>>
-# Created Date..........: <<4-March-2010>>
-# Last Modified by......: <<>>
-# Last Modified Date....: <<>>
-# Description...........: <<>>
-#
-# Created by the Astadia, Inc.
-# Company URL : http://www.astadia.com
-###########################################################################*/
-public class CalculatePFYRR
+public class MondoSample
 {
     @future(callout=true)
     public static void doCalc(List<Id> opps)
     {
-    	//Set<id> oppIds = new Set<Id>();
     	String yr = Date.today().addYears(1).year().format().replaceAll(',', '');
     	system.debug('year: ' + yr);
     	FiscalYearSettings fys = [select StartDate from FiscalYearSettings where name = :yr limit 1];
@@ -29,9 +15,7 @@ public class CalculatePFYRR
     	system.debug('q3start: ' + Q3Start);
     	Date Q4Start = Q3Start.addMonths(3);
     	system.debug('q4start: ' + Q4Start);
-    	   	
-    	   	
-    	//build map of opportunities to get the confidence to win %
+
     	Map<Id,Integer> cToWinMap = new Map<Id,Integer>();
     	Map<Id,String> curMap = new Map<Id,String>();
     	for(Opportunity o :[select id, Confidence_to_Win__c, CurrencyIsoCode from Opportunity where id in :opps])
@@ -46,14 +30,13 @@ public class CalculatePFYRR
     		}
     		curMap.put(o.Id, o.CurrencyIsoCode);
     	}
-    	//build map of existing pfqrr records
+
     	Map<String,Projected_Fiscal_Quarter_Run_Rate__c> pfqrrMap = new Map<String,Projected_Fiscal_Quarter_Run_Rate__c>();
     	for(Projected_Fiscal_Quarter_Run_Rate__c pfqrr:[select id, Opportunity__c, Fiscal_Year__c, Quarter__c from Projected_Fiscal_Quarter_Run_Rate__c where Opportunity__c in :opps])
     	{
     		system.debug('existing pfqrr: ' + pfqrr.Opportunity__c + pfqrr.Quarter__c + pfqrr.Fiscal_Year__c);
     		pfqrrMap.put(pfqrr.Opportunity__c + pfqrr.Quarter__c + pfqrr.Fiscal_Year__c, pfqrr);
     	}
-    	
     	
     	Map<String,Decimal> amountMap = new Map<String, Decimal>();
     	Projected_Fiscal_Quarter_Run_Rate__c[] pfqrrInsert = new Projected_Fiscal_Quarter_Run_Rate__c[0];
@@ -122,9 +105,6 @@ public class CalculatePFYRR
 	    	}
 		}
 		
-		
-		//loop through existing and update where we have created a map
-		//loop through new ones and update amounts, insert
 		system.debug('looping through updates');
 		Projected_Fiscal_Quarter_Run_Rate__c[] pfqrrUpdate = new Projected_Fiscal_Quarter_Run_Rate__c[0];
     	for(Projected_Fiscal_Quarter_Run_Rate__c pfqrr:[select id, Opportunity__c, Opportunity__r.Confidence_to_Win__c, Fiscal_Year__c, Quarter__c from Projected_Fiscal_Quarter_Run_Rate__c where Opportunity__c in :opps])
@@ -162,7 +142,6 @@ public class CalculatePFYRR
     			pfqrr1.CurrencyIsoCode = curMap.get(pfqrr1.Opportunity__c);
     		}
     	}
-    	
     	
     	if(pfqrrUpdate.size() > 0)
     	{
