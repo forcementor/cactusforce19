@@ -184,17 +184,17 @@
 				<section data-transition="fade-in fade-out">
 					<h4>What are mondo-mania code smells?</h4>
 					<h8 class="fragment fade-in">Excessive line length</h8><br/>
-					<h8 class="fragment fade-in">Excessive/Nested conditional branching</h8><br/>
-					<h8 class="fragment fade-in">Multiple/Nested loops</h8><br/>
-					<h8 class="fragment fade-in">Multiple/Conditional DML operations </h8><br/>
+					<h8 class="fragment fade-in">Excessive conditional branching</h8><br/>
+					<h8 class="fragment fade-in">Excessive loops</h8><br/>
+					<h8 class="fragment fade-in">Excessive DML operations </h8><br/>
 				</section>
 
 				<section data-transition="fade-in fade-out">
 					<h4>What are mondo-mania code smells?</h4>
 					<h8><span style="color:red">Excessive</span> line length</h8><br/>
-					<h8><span class="fragment highlight-red">Excessive/Nested</span> conditional branching</h8><br/>
-					<h8><span class="fragment highlight-red">Multiple/Nested</span> loops</h8><br/>
-					<h8><span class="fragment highlight-red">Multiple/Conditional</span> DML operations </h8><br/>
+					<h8><span class="fragment highlight-red">Excessive</span> conditional branching</h8><br/>
+					<h8><span class="fragment highlight-red">Excessive</span> loops</h8><br/>
+					<h8><span class="fragment highlight-red">Excessive</span> DML operations </h8><br/>
 				</section>
 
 				<section data-transition="fade-in fade-out">
@@ -454,8 +454,8 @@ trigger SessionRegistration
 
 				<section data-transition="fade-in fade-out">
 						<h4>Synchronous vs Asynchronous</h4>
-						<h8 class="fragment fade-in">Synchronous if &lt;120 seconds with REST or SOAP</h8><br/>
-						<h8 class="fragment fade-in">Asynchronous if &gt;120 seconds using Platform Events (EDA)</h8><br/>
+						<h8 class="fragment fade-in">Sync if &lt;120 secs with REST or SOAP</h8><br/>
+						<h8 class="fragment fade-in">Async if &gt;120 secs using Platform Events (EDA)</h8><br/>
 						<h8 class="fragment fade-in">Do what’s easiest for YOU!</h8><br/>
 						<h8 class="fragment fade-in">Sync-Async Service vs. Sync-Async Apex callout</h8><br/>
 				</section>
@@ -493,36 +493,69 @@ trigger SessionRegistration
 					</style>
 					<script src="https://gist.github.com/forcementor/754efb1e2a6cfbb42f087d38761c6a12.js"></script>
 				</section>
-	
+
+				<section data-transition="slide-in fade-out">
+					<h4>PDF-Convert Web Service</h4>
+					<a href="https://github.com/forcementor/pdf-convert" target="_none">
+						<img src="img/pdf-convert-git.jpg" style="border:none;" height="95%" width="75%"/>
+					</a>
+				</section>
+
 				<section >
 					<h4>http://bit.ly/PuntaDreaminMicroSvcs</h4>
-					<iframe width="853" height="480" src="https://www.youtube.com/embed/O-Ohni7wEKA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-				</section>
-			
-				<!-- SOC Supplemental =========================================== -->				
-
-				<section data-background-video="media/SocClipSilent.mp4" 
-							data-background-video-loop data-background-size="cover">
-					<div>
-						<img data-src="img/SocTitle.jpg" style="opacity: 0.75" height="50%" width="50%">
-					</div>
+					<iframe width="853" height="480" src="https://www.youtube.com/embed/O-Ohni7wEKA?start=160" frameborder="0" allow="accelerometer; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 				</section>
 
-				<section data-background-iframe="img/ApexSocChannel.jpg" 
-							data-background-interactive 
-							class="stretch" >
+				<section data-transition="fade-in fade-out">
+						<h3>Want some more <br/>stuff to chew on?</h3>
 				</section>
 
+				<section data-transition="slide-in fade-out">
+					<h4>Understanding Apex Enterprise Patterns and Separation of Concerns in Salesforce</h4>
+					<h8>with Peter Tempfli</h2>
+					<br/>	
+					<a href="http://bit.ly/SfPlayByPlay22" target="_none"> 
+						<img src="img/peter.jpg" style="border:none;" width="60%" />
+					</a>	
+				</section>
+	
+				<section data-transition="slide-in fade-out">
+					<h4>Apex SOC Course Channel</h4>
+					<h8>bit.ly/ApexSOC</h8>
+					<br/>	
+					<img src="img/ApexSocChannel.jpg" style="border:none;" width="60%" />
+				</section>
 
+				<section data-transition="slide-in fade-out">
+					<h4>Adopting Trigger Design Patterns <br/>in Existing Salesforce Orgs</h4>
+					<h8>with Dan Appleman</h2>
+					<br/>	
+					<img src="img/dan.jpg" style="border:none;" width="60%" />
+				</section>
 
-
-
+				<section data-transition="slide-in fade-out">
+					<h4>Getting on the Bus - Event Based Architecture with Salesforce Platform Events</h4>
+					<h8>with Simon Goodyear</h2>
+					<br/>	
+					<img src="img/simon.jpg" style="border:none;" width="60%" />
+				</section>
+	
+				<section data-transition="slide-in fade-out">
+					<h4>Maximize Your Value Through <br/>Salesforce Coding Best Practices</h4>
+					<h8>with Matt Kaufman</h2>
+					<br/>	
+					<img src="img/matt.jpg" style="border:none;" width="60%" />
+				</section>
+	
+				<section data-transition="slide-in fade-out">
+					<h4>Understanding Heroku Myths and Magic</h4>
+					<h8>with Lyric Hartley</h2>
+					<br/>	
+					<img src="img/lyric.jpg" style="border:none;" width="60%" />
+				</section>
+	
 				<section style="text-align: left;">
 					<h3>Thanks!</h3>
-					<p>
-						- <a href="https://slides.com">Try the online editor</a> <br>
-						- <a href="https://github.com/hakimel/reveal.js">Source code &amp; documentation</a>
-					</p>
 				</section>
 	
 			</div>
