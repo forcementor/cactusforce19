@@ -320,12 +320,12 @@
 				</section>
 
 			    <section data-transition="fade-in fade-out">
-						<h4>The fflib Apex Common Framework</h4>
+						<h4>Attendee Registration Reference App</h4>
 						<img src="img/tempflip-soc-events-git.jpg"  style="border:none;" height="95%" width="75%"/>
 				</section>
 
 				<section data-transition="slide-in fade-out">
-					<h4>The AttendeeService Apex Class</h4>
+					<h4>AttendeeService Class</h4>
 					<style type="text/css">
 						.gist {width:100% !important;}
 						.gist-file
@@ -336,34 +336,43 @@
 				</section>
 
 				<section>
-						<h4>Service Method Called From a Component Controller</h4>
-						<pre><code class="hljs" data-trim contenteditable>
+						<h4>Called From a Component Controller</h4>
+						<pre><code class="hljs" >
 @AuraEnabled
 public static Attendee saveAttendee(String attendeeJSON) {
-	Attendee att = AttendeeService.saveAttendee(attendeeJSON);
-	return getAttendee(att.recordId);
+	
+    Attendee att = AttendeeService.saveAttendee(attendeeJSON);
+	
+    return getAttendee(att.recordId);
 }
 						</code></pre>
 				</section>
 
 				<section>
-					<h4>Service Method Called From a Visualforce Controller</h4>
-					<pre><code class="hljs" data-trim contenteditable>
+					<h4>Called From a Visualforce Controller</h4>
+					<pre><code class="hljs" >
 public PageReference saveRegistrations() {
-	AttendeeService.saveAttendee(this.attendee);
+	
+   AttendeeService.saveAttendee(this.attendee);
 
-	PageReference pr = new PageReference('/' + this.attendee.recordId);
-	pr.setRedirect(true);
-	return pr;
+   PageReference pr = 
+        new PageReference('/' + this.attendee.recordId);
+
+   pr.setRedirect(true);
+	
+   return pr;
 }
 					</code></pre>
 				</section>
 	
 				<section>
-					<h4>Service Method Called From a Trigger</h4>
-					<pre><code class="hljs" data-trim contenteditable>
-trigger SessionRegistration on Session_Registration__c (before insert) {
-	AttendeeService.validateSessionRegistration(trigger.new);
+					<h4>Called From a Trigger</h4>
+					<pre><code class="hljs" >
+trigger SessionRegistration 
+		on Session_Registration__c (before insert) {
+	
+   AttendeeService.validateSessionRegistration(trigger.new);
+
 }
 					</code></pre>
 				</section>
@@ -381,7 +390,7 @@ trigger SessionRegistration on Session_Registration__c (before insert) {
 						<h8 class="fragment fade-in">Evolving requirements</h8><br/>
 						<h8 class="fragment fade-in">Growing scope of your org</h8><br/>
 						<h8 class="fragment fade-in">Expanding or distributed team </h8><br/>
-						<h8 class="fragment fade-in">Multiple Clients</h8><br/>
+						<h8 class="fragment fade-in">Multiple clients</h8><br/>
 						<h8 class="fragment fade-in">Building a product</h8><br/>
 				</section>
 
@@ -391,7 +400,7 @@ trigger SessionRegistration on Session_Registration__c (before insert) {
 						<h8 class="fragment fade-in">Must follow bulkification and limits guidelines</h8><br/>
 						<h8 class="fragment fade-in">Must be maintained to avoid 'Leaks'</h8><br/>
 						<h8 class="fragment fade-in">Should follow strict naming conventions</h8><br/>
-						<h8 class="fragment fade-in">Should handle Unt of Work for transactions</h8><br/>
+						<h8 class="fragment fade-in">Should handle Unit of Work for DML transactions</h8><br/>
 						<h8 class="fragment fade-in">May be synchronous or asynchronous</h8><br/>
 				</section>
 				
