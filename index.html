@@ -42,19 +42,19 @@
 			<div class="slides">
 
 				<section>
-						<h2>Embracing </br>Service Oriented Patterns</br> in Apex</h2>
-						<h8>(or how to avoid <i>Mondo-mania</i>)</h8>
+					<h2>Embracing </br>Service Oriented Patterns</br> in Apex</h2>
+					<h8>(or how to avoid <i>Mondo-mania</i>)</h8>
 				</section>
 
 				<section data-transition="slide">
-						<h4>Don Robins</h4>
-						<p/>
-						<h8>Technical Educator</h8><br/>
-						<h8>5x Salesforce MVP</h8><br/>
-						<h8>Certified Instructor/PDII</h8><br/>
-						<h8>Salesforce Training Partner</h8><br/>
-						<h8>Pluralsight Author and Producer</h8><br/>
-						<h8>Books, Posts, Articles</h8><br/>
+					<h4>Don Robins</h4>
+					<p/>
+					<h8>Technical Educator</h8><br/>
+					<h8>5x Salesforce MVP</h8><br/>
+					<h8>Certified Instructor/PDII</h8><br/>
+					<h8>Salesforce Training Partner</h8><br/>
+					<h8>Pluralsight Author and Producer</h8><br/>
+					<h8>Books, Posts, Articles</h8><br/>
 				</section>
 
 				<section data-transition="slide-in fade-out">
@@ -81,8 +81,8 @@
 				<section data-transition="fade-in fade-out">
 					<h4>...and to expose and encourage you to:</h3>
 					<h8 class="fragment">Explore software development patterns</h8><br/>
-					<h8 class="fragment">by layering your code base</h8><br/>
-					<h8 class="fragment">and decoupling complexity in your org</h8><br/>										
+					<h8 class="fragment">that layer your code base</h8><br/>
+					<h8 class="fragment">to decouple complexity in your org</h8><br/>										
 				</section>
 
 				<section data-transition="slide-in fade-out">
@@ -119,16 +119,9 @@
 
 				<section data-transition="slide-in fade-out">
 					<img src="img/Mongo.jpg" />	
-
 					<h4 class="fragment fade-in">
 						MONGO
 					</h4>	
-
-					<!--
-					<p class="fragment fade-in">
-						<i>MONGO</i>
-					</p>	
-					-->	
 				</section>
 	
 				<section data-transition="fade-in slide-out" >
@@ -164,7 +157,8 @@
 				</section>
 	
 				<section data-transition="slide-in fade-out">
-					<h3>mondo-mania</h3><h6><i> noun</i></h6> 
+					<h3>mondo-mania</h3>
+					<h6><i>noun</i></h6> 
 					<h6><i>the preponderance of<br/>
 						mondo coding patterns<br/>
 						with excessive amounts<br/>
@@ -174,26 +168,27 @@
 				<section data-transition="slide-in fade-out">
 					<h3>Mondo-mania<br/>
 					commonly strikes<br/>
-					Salesforce orgs</hr3><br/>
+					Salesforce orgs<br/></h3>
 					<div class="fragment fade-in">
-						<h8>and (like Mongo) is<br/></h8>
-						<h8>thoughtless and brutish</h8>
+						<h6>and is thoughtless and brutish</h6>
 					</div>
+					<h6 class="fragment fade-in">(like Mongo)</h6>
 				</section>
 	
 				<section data-transition="fade-in fade-out">
-					<h4>How can you detect mondo<br/>coding patterns in your org?</h4>
-					<h8 class="fragment fade-in">Look for the code smells</h8><br/>
+					<h3>How can you detect mondo<br/>coding patterns in your org?</h3>
+					<h6 class="fragment fade-in">They smell</h6>
+					<h6 class="fragment fade-in">(like Mongo)</h6>
 				</section>
 
 				<section data-transition="fade-in fade-out">
-						<h3>What is a<br/>Code Smell?</h3>
+					<h3>What is a<br/>Code Smell?</h3>
 				</section>
 				
 				<section data-transition="fade-in fade-out">
-					<h3 style="color:white">code smell</h3>
-					<h6 style="color:white"><i> noun</i></h6> 
-					<p style="color:white"><i>a characteristic of source code <br/>suggesting a deeper problem.</i></p>
+					<h3>code smell</h3>
+					<h6><i>noun</i></h6> 
+					<p><i>a characteristic of source code <br/>suggesting a deeper problem.</i></p>
 				</section>
 
 				<section data-transition="fade-in fade-out"
@@ -206,6 +201,7 @@
 					<h8 class="fragment fade-in">Excessive line length</h8><br/>
 					<h8 class="fragment fade-in">Excessive conditional branching</h8><br/>
 					<h8 class="fragment fade-in">Excessive loops</h8><br/>
+					<h8 class="fragment fade-in">Excessive nested logic</h8><br/>
 					<h8 class="fragment fade-in">Excessive DML operations </h8><br/>
 				</section>
 
@@ -214,30 +210,24 @@
 					<h8><span style="color:red">Excessive</span> line length</h8><br/>
 					<h8><span style="color:red">Excessive</span> conditional branching</h8><br/>
 					<h8><span style="color:red">Excessive</span> loops</h8><br/>
+					<h8><span style="color:red">Excessive</span> nested logic</h8><br/>					
 					<h8><span style="color:red">Excessive</span> DML operations </h8><br/>
 				</section>
 	
-				<!--	
-				<section data-transition="fade-in fade-out">
-					<h4>What are some mondo<br/>coding pattern smells?</h4>
-					<h8><span style="color:red">Excessive</span> line length</h8><br/>
-					<h8><span class="fragment highlight-red">Excessive</span> conditional branching</h8><br/>
-					<h8><span class="fragment highlight-red">Excessive</span> loops</h8><br/>
-					<h8><span class="fragment highlight-red">Excessive</span> DML operations </h8><br/>
-				</section>
-				-->	
 				<section data-transition="fade-in fade-out">
 					<h4>Where should you look for mondo<br/>coding patterns in your org?</h4>
 					<h8 class="fragment fade-in">Apex Triggers</h8><br/>
-					<h8 class="fragment fade-in">Apex Classes and Methods</h8><br/>
+					<h8 class="fragment fade-in">Apex Classes Methods</h8><br/>
 					<h8 class="fragment fade-in">Visualforce Pages</h8><br/>
+					<h8 class="fragment fade-in">Lightning Components</h8><br/>					
 				</section>
 
 				<section data-transition="fade-in fade-out">
 					<h4>Where should you look for mondo<br/>coding patterns in your org?</h4>
 					<h8>Apex Triggers</h8><br/>
-					<h8>Apex Classes and Methods</h8><br/>
+					<h8>Apex Classes Methods</h8><br/>
 					<h8 style="text-decoration: line-through; color:grey">Visualforce Pages</h8><br/>
+					<h8 style="text-decoration: line-through; color:grey">Lightning Components</h8><br/>					
 				</section>
 
 				<section data-transition="slide-in fade-out">
@@ -259,67 +249,72 @@
 					<h3>What is the solution?</h3>
 				</section>
 
-
-				<!-- 15 MINS 20 % -->
-
 				<section data-transition="fade-in fade-out">
-						<h1>SOC</h1>
+					<h1>SOC</h1>
 				</section>
 					
 				<section data-transition="fade-in fade-out">
-						<h3>Separation of Concerns</h3>
+					<h3>Separation of Concerns</h3>
 				</section>
 				
 				<section data-transition="fade-in fade-out">
-						<h3>What is <br/>Separation of Concerns?</h3>
+					<h3>What is <br/>Separation of Concerns?</h3>
 				</section>
 				
 				<section data-transition="fade-in fade-out">
-					<h3 style="color:white">separation of concerns</h3>
-					<h6 style="color:white"><i> noun</i></h6> 
-					<p style="color:white"><i>a design principal of breaking down code <br/>into distinct sections, each addressing a concern.</i></p>
+					<h3>separation of concerns</h3>
+					<h6><i>noun</i></h6> 
+					<p><i>a design principal of breaking down code <br/>into distinct sections, each addressing a concern.</i></p>
 				</section>
 
 				<section data-transition="fade-in fade-out"
-						 data-background-iframe="https://en.wikipedia.org/wiki/Separation_of_concerns" 
-						 data-background-interactive >
+					data-background-iframe="https://en.wikipedia.org/wiki/Separation_of_concerns" 
+					data-background-interactive >
 
 				</section>
 
 				<section data-transition="fade-in fade-out"
-						 data-background-iframe="https://trailhead.salesforce.com/content/learn/modules/apex_patterns_sl/apex_patterns_sl_soc" 
-						 data-background-interactive >
+					data-background-iframe="https://trailhead.salesforce.com/content/learn/modules/apex_patterns_sl/apex_patterns_sl_soc" 
+					data-background-interactive >
 				</section>
 
 				<section data-transition="fade-in fade-out">
-						<h3>SOC <br/>is a collection of <br/>software design patterns</h3>
-						<h6 class="fragment fade-in"><i>(it is NOT a framework!)</i></h6>
+					<h3>SOC <br/>includes a collection of <br/>software design patterns</h3>
+					<h6 class="fragment fade-in"><i>(BUT it's NOT a framework!)</i></h6>
 				</section>
 
 				<section data-transition="fade-in fade-out">
-						<h3 style="color:white">software framework</h3>
-						<h6 style="color:white"><i> noun</i></h6> 
-						<p style="color:white"><i>a collection of reusable code <br/>that implements a solution to a <br/>common problem in software design.</i></p>
+					<h3>software framework</h3>
+					<h6><i>noun</i></h6> 
+					<p><i>a collection of reusable code <br/>that implements a solution to a <br/>common problem in software design.</i></p>
 				</section>				
 			
 			    <section data-transition="fade-in fade-out">
-						<h4>The fflib Apex Common Framework</h4>
-						<img src="img/fflibgithub.jpg"  style="border:none;" height="95%" width="75%"/>
+					<h4>The fflib Apex Common Framework</h4>
+					<img src="img/fflibgithub.jpg"  style="border:none;" height="95%" width="75%"/>
 				</section>
 
 				<section data-transition="fade-in fade-out">
-					<h3>Software Frameworks <br/>!= <br/>Design Patterns</h3>
+					<h3>Frameworks != Patterns</h3>
+					<div class="fragment fade-in">
+						<h6><i>Frameworks implement design patterns,<br/>
+							but design patterns can be<br/>
+							implemented without a framework<br/>
+							(much easier)
+						</i>
+						</h6>
+					</div>
 				</section>
 
 				<section data-transition="fade-in fade-out">
-					<h3 style="color:white">software design pattern</h3>
-					<h6 style="color:white"><i> noun</i></h6> 
-					<p style="color:white"><i>a reusable solution to a <br/>common problem in software design.</i></p>
+					<h3>software design pattern</h3>
+					<h6><i>noun</i></h6> 
+					<p><i>a reusable solution to a <br/>common problem in software design.</i></p>
 				</section>				
 
 				<section data-transition="fade-in fade-out"
-						 data-background-iframe="https://en.wikipedia.org/wiki/Software_design_pattern" 
-						 data-background-interactive >
+						data-background-iframe="https://en.wikipedia.org/wiki/Software_design_pattern" 
+						data-background-interactive >
 
 				</section>
 
@@ -329,18 +324,20 @@
 				</section>
 
 				<section data-transition="fade-in fade-out">
-					<h4>What patterns can <br/>help resolve mondo-mania?</h4>
+					<h4>What design patterns can <br/>help resolve mondo-mania?</h4>
 					<h8 class="fragment fade-in">Service Layer</h8><br/>
 					<h8 class="fragment fade-in">Domain Layer</h8><br/>
 					<h8 class="fragment fade-in">Selector Layer</h8><br/>
+					<h8 class="fragment fade-in">Unit of Work</h8><br/>
 					<h8 class="fragment fade-in">Trigger Handler</h8><br/>
 				</section>
 	
 				<section data-transition="fade-in fade-out">
-					<h4>What patterns can <br/>help resolve mondo-mania?</h4>
+					<h4>What design patterns can <br/>help resolve mondo-mania?</h4>
 					<h8><strong>Service Layer</strong><br/>
 					<h8><span style="text-decoration: line-through; color:grey">Domain Layer</span></h8><br/>
 					<h8><span style="text-decoration: line-through; color:grey">Selector Layer</span></h8><br/>
+					<h8><span style="text-decoration: line-through; color:grey">Unit of Work</span></h8><br/>
 					<h8><span style="text-decoration: line-through; color:grey">Trigger Handler</span></h8><br/>
 				</section>				
 
@@ -348,28 +345,28 @@
 					<h3>service layer</h3>
 					<h6><i>noun</i></h6> 
 					<p><i>a set of available services for the<br/>
-						application’s operations and their responses.<br/>
+						application’s operations and their responses.<br/><br/>
 						It sets the boundary between the business logic<br/>
 						concerns in the Service layer and those of<br/>
-						the calling execution context (or clients).</i>
+						the calling execution context clients.</i>
 					</p>		
 				</section>				
 
 			    <section data-transition="fade-in fade-out">
-						<img src="img/apex_mondo_anti_pattern.jpg"  style="border:none;" height="95%" width="95%"/>
+					<img src="img/apex_mondo_anti_pattern.jpg"  style="border:none;" height="95%" width="95%"/>
 				</section>
 
 			    <section data-transition="fade-in fade-out">
-						<img src="img/apex_service_pattern.jpg"  style="border:none;" height="95%" width="95%"/>
+					<img src="img/apex_service_pattern.jpg"  style="border:none;" height="95%" width="95%"/>
 				</section>
 
 				<section data-transition="fade-in fade-out">
-						<h3>What does a <br/>Service Layer <br/>class look like?</h3>
+					<h3>What does a <br/>Service Layer <br/>implementation<br/> look like?</h3>
 				</section>
 
 			    <section data-transition="fade-in fade-out">
-						<h4>Attendee Registration Reference App</h4>
-						<img src="img/tempflip-soc-events-git.jpg"  style="border:none;" height="95%" width="75%"/>
+					<h4>Attendee Registration Reference App</h4>
+					<img src="img/tempflip-soc-events-git.jpg"  style="border:none;" height="95%" width="75%"/>
 				</section>
 
 				<section data-background-video="media/SocClipSilent.mp4" 
@@ -391,8 +388,8 @@
 				</section>
 
 				<section>
-						<h4>Called From a Component Controller</h4>
-						<pre><code class="hljs" >
+					<h4>Called From a Component Controller</h4>
+					<pre><code class="hljs" >
 @AuraEnabled
 public static Attendee saveAttendee(String attendeeJSON) {
 	
@@ -400,7 +397,7 @@ public static Attendee saveAttendee(String attendeeJSON) {
 	
     return getAttendee(att.recordId);
 }
-						</code></pre>
+					</code></pre>
 				</section>
 
 				<section>
@@ -433,88 +430,84 @@ trigger SessionRegistration
 				</section>
 	
 				<section data-transition="fade-in fade-out">
-						<h4>What are <br/>Service Layer benefits?</h4>
-						<h8 class="fragment fade-in">Decouples complexity</h8><br/>
-						<h8 class="fragment fade-in">Allows reuse from multiple entry points</h8><br/>
-						<h8 class="fragment fade-in">Encapsulates concern logic</h8><br/>
-						<h8 class="fragment fade-in">Organizes where business logic resides</h8><br/>
+					<h4>What are <br/>Service Layer benefits?</h4>
+					<h8 class="fragment fade-in">Decouples complexity</h8><br/>
+					<h8 class="fragment fade-in">Allows reuse from multiple entry points</h8><br/>
+					<h8 class="fragment fade-in">Encapsulates concern logic</h8><br/>
+					<h8 class="fragment fade-in">Organizes where business logic resides</h8><br/>
 				</section>
 	
 				<section data-transition="fade-in fade-out">
-						<h4>When is a Service Layer <br/>worth the effort?</h4>
-						<h8 class="fragment fade-in">Evolving requirements</h8><br/>
-						<h8 class="fragment fade-in">Growing scope of your org</h8><br/>
-						<h8 class="fragment fade-in">Expanding or distributed team </h8><br/>
-						<h8 class="fragment fade-in">Multiple clients</h8><br/>
-						<h8 class="fragment fade-in">Building a product</h8><br/>
+					<h4>When is a Service Layer <br/>worth the effort?</h4>
+					<h8 class="fragment fade-in">Evolving requirements</h8><br/>
+					<h8 class="fragment fade-in">Growing scope of your org</h8><br/>
+					<h8 class="fragment fade-in">Expanding or distributed team </h8><br/>
+					<h8 class="fragment fade-in">Multiple execution context clients</h8><br/>
+					<h8 class="fragment fade-in">Building a product</h8><br/>
 				</section>
 
 				<section data-transition="fade-in fade-out">
-						<h4>What are <br/>Service Layer guidelines?</h4>
-						<h8 class="fragment fade-in">Must be caller agnostic</h8><br/>
-						<h8 class="fragment fade-in">Must follow bulkification and limits guidelines</h8><br/>
-						<h8 class="fragment fade-in">Must be maintained to avoid 'Leaks'</h8><br/>
-						<h8 class="fragment fade-in">Should follow strict naming conventions</h8><br/>
-						<h8 class="fragment fade-in">Should handle Unit of Work for DML transactions</h8><br/>
-						<h8 class="fragment fade-in">May be synchronous or asynchronous</h8><br/>
+					<h4>What are <br/>Service Layer guidelines?</h4>
+					<h8 class="fragment fade-in">Must be caller agnostic</h8><br/>
+					<h8 class="fragment fade-in">Must follow bulkification and limits guidelines</h8><br/>
+					<h8 class="fragment fade-in">Must be maintained to avoid 'Leaks'</h8><br/>
+					<h8 class="fragment fade-in">Should follow strict naming conventions</h8><br/>
+					<h8 class="fragment fade-in">Should handle Unit of Work for DML transactions</h8><br/>
+					<h8 class="fragment fade-in">May be synchronous or asynchronous</h8><br/>
 				</section>
 				
 				<section data-transition="fade-in fade-out">
-						<h3>Are there other kinds of services?</h3>
-				</section>
-
-				<!-- MICROSERVICES =========================================== -->
-
-				<section data-transition="fade-in fade-out">
-						<h4>When you can't do what you<br/>
-							need in an Apex service,<br/>
-							implement your logic as a<br/> 
-							<i>microservice</i> somewhere else.<br/>
-						</h4>
+					<h3>Are there other kinds of services?</h3>
 				</section>
 
 				<section data-transition="fade-in fade-out">
-					<h3 style="color:white">microservice</h3>
-					<h6 style="color:white"><i> noun</i></h6> 
-					<p style="color:white"><i>A loosely coupled, fine-grained <br/>and lightweight web service.</i></p>
+					<h4>When you can't do what you<br/>
+						need in an Apex service,<br/>
+						implement your logic as a<br/> 
+						<i>microservice</i> somewhere else.<br/>
+					</h4>
+				</section>
+
+				<section data-transition="fade-in fade-out">
+					<h3>microservice</h3>
+					<h6><i>noun</i></h6> 
+					<p><i>A loosely coupled, fine-grained <br/>and lightweight web service.</i></p>
 				</section>				
 
 				<section data-transition="fade-in fade-out"
 							data-background-iframe="https://en.wikipedia.org/wiki/Microservices" 
 							data-background-interactive >
-
 				</section>
 
 				<section data-transition="fade-in fade-out">
-						<h4>What are Microservice guidelines?</h4>
-						<h8 class="fragment fade-in">Should fulfill a single function</h8><br/>
-						<h8 class="fragment fade-in">Should be light weight and independent</h8><br/>
-						<h8 class="fragment fade-in">Should be written in the most efficient language</h8><br/>
-						<h8 class="fragment fade-in">Should follow consistent conventions</h8><br/>
-						<h8 class="fragment fade-in">Should accept and return data</h8><br/>
-						<h8 class="fragment fade-in">May use synchronous or asynchronous protocol</h8><br/>
+					<h4>What are Microservice guidelines?</h4>
+					<h8 class="fragment fade-in">Should fulfill a single function</h8><br/>
+					<h8 class="fragment fade-in">Should be light-weight and independent</h8><br/>
+					<h8 class="fragment fade-in">Should be written in the most efficient language</h8><br/>
+					<h8 class="fragment fade-in">Should follow consistent conventions</h8><br/>
+					<h8 class="fragment fade-in">Should accept and return data</h8><br/>
 				</section>
 
 				<section data-transition="fade-in fade-out">
-						<h4>Synchronous vs Asynchronous</h4>
-						<h8 class="fragment fade-in">Sync if &lt;120 secs with REST or SOAP</h8><br/>
-						<h8 class="fragment fade-in">Async if &gt;120 secs using Platform Events (EDA)</h8><br/>
-						<h8 class="fragment fade-in">Do what’s easiest for YOU!</h8><br/>
-						<h8 class="fragment fade-in">Sync-Async Service vs. Sync-Async Apex callout</h8><br/>
+					<h4>Synchronous vs Asynchronous</h4>
+					<h8 class="fragment fade-in">Sync if &lt;120 secs with REST or SOAP</h8><br/>
+					<h8 class="fragment fade-in">Async if &gt;120 secs using Platform Events (EDA)</h8><br/>
+					<h8 class="fragment fade-in">Do what’s easiest for YOU!</h8><br/>
+					<h8 class="fragment fade-in">Sync-Async Service vs. Sync-Async Apex callout</h8><br/>
 				</section>
 
 			    <section data-transition="fade-in fade-out">
-						<h4>Microservice Use Case</h4>
-						<img src="img/microservice_use_case.png"  style="border:none;" height="95%" width="75%"/>
+					<h4>Microservice Use Case</h4>
+					<img src="img/microservice_use_case.png"  style="border:none;" height="95%" width="75%"/>
 				</section>
 
 			    <section data-transition="fade-in fade-out">
-						<img src="img/remittance_process_seq.jpg"  style="border:none;" height="95%" width="95%"/>
+					<img src="img/remittance_process_seq.jpg"  style="border:none;" height="95%" width="95%"/>
 				</section>
 
 			    <section data-transition="fade-in fade-out">
-						<h4>Async Call Out</h4>
-						<img src="img/microservice_use_case_async.png"  style="border:none;" height="95%" width="95%"/>
+					<h4>Async Call Out</h4>
+					<img src="img/microservice_use_case_async.png"  style="border:none;" height="95%" width="95%"/>
 				</section>
 
 				<section data-transition="slide-in fade-out">
@@ -550,7 +543,7 @@ trigger SessionRegistration
 				</section>
 
 				<section data-transition="fade-in fade-out">
-						<h3>Want even more <br/>stuff to chew on?</h3>
+					<h3>Want more?</h3>
 				</section>
 
 				<section data-transition="slide-in fade-out">
@@ -612,7 +605,6 @@ trigger SessionRegistration
 				</section>
 
 				<section style="text-align: left;">
-					
 					<ul>
 						<li>Visit our sponsors</li>
 						<li>Follow me on Twitter @donrobins</li>
@@ -620,8 +612,10 @@ trigger SessionRegistration
 						<li>Share with your Ohana</li>
 					</ul>
 					<br/><br/>
-					<h3>Thanks!</h3>
+					<h8>This presentation is on Github here:</h8><br/>
 					<img src="img/cactusforce19qr.png"  style="border:none;" height="25%" width="25%"/>
+					<br/>
+					<h3>Thanks!</h3>
 				</section>
 	
 			</div>
